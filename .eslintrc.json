@@ -4,10 +4,20 @@
     "plugin:@typescript-eslint/recommended",
     "plugin:import/errors",
     "plugin:import/typescript",
-    "prettier"
+    "plugin:react/recommended",
+    "plugin:jsx-a11y/recommended",
+    "prettier",
+    "prettier/react"
   ],
-  "plugins": ["import", "@typescript-eslint"],
+  "plugins": [
+    "react",
+    "import",
+    "jsx-a11y",
+    "react-hooks",
+    "@typescript-eslint"
+  ],
   "rules": {
+    "react/prop-types": 0,
     "no-console": 1
   },
   "parser": "@typescript-eslint/parser",
@@ -22,5 +32,8 @@
     "es6": true,
     "browser": true,
     "node": true
+  },
+  "settings": {
+    "react": { "version": "detect" }
   }
 }
