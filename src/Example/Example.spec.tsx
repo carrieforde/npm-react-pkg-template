@@ -1,10 +1,10 @@
 import React from "react";
 import { render } from "@testing-library/react";
-import Example from "./Example";
+import { HelloWorld } from "./Example.stories";
 
 describe("Example", () => {
   it("should return the correct salutation", () => {
-    const { container } = render(<Example param="World" />);
+    const { container } = render(<HelloWorld {...HelloWorld.args} />);
     expect(container.firstChild.textContent).toEqual("Hello World");
   });
 });
